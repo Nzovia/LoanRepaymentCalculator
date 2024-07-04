@@ -10,11 +10,12 @@ public class LoanRepaymentRequest {
     private double loanAmount;
     private int loanTermInMonths;
     private double interestRatePerYear;
-    private String  loanRePaymentFrequency;
+    private LoanRePaymentFrequency  loanRePaymentFrequency;
+
 
     public LoanRepaymentRequest(double loanAmount, int loanTermInMonths,
                                 double interestRatePerYear,
-                                String loanRePaymentFrequency) {
+                                LoanRePaymentFrequency loanRePaymentFrequency) {
         this.loanAmount = loanAmount;
         this.loanTermInMonths = loanTermInMonths;
         this.interestRatePerYear = interestRatePerYear;
@@ -45,11 +46,11 @@ public class LoanRepaymentRequest {
         this.interestRatePerYear = interestRatePerYear;
     }
 
-    public String getLoanRePaymentFrequency() {
+    public LoanRePaymentFrequency getLoanRePaymentFrequency() {
         return loanRePaymentFrequency;
     }
 
-    public void setLoanRePaymentFrequency(String loanRePaymentFrequency) {
+    public void setLoanRePaymentFrequency(LoanRePaymentFrequency loanRePaymentFrequency) {
         this.loanRePaymentFrequency = loanRePaymentFrequency;
     }
 }

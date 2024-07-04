@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author Nicholas Nzovia
@@ -11,14 +12,13 @@ import java.util.HashMap;
 public class LoanRepaymentResponse {
     private double totalInterest;
     private double payableTotalAMount;
-    private HashMap<String, Integer> myHashMap;
+    private List<LoanRepaymentSummary> loanRepaymentSummaryTable;
 
-    public LoanRepaymentResponse(double totalInterest,
-                                 double payableTotalAMount,
-                                 HashMap<String, Integer> myHashMap) {
+    public LoanRepaymentResponse(double totalInterest, double payableTotalAMount,
+                                 List<LoanRepaymentSummary> loanRepaymentSummaryTable) {
         this.totalInterest = totalInterest;
         this.payableTotalAMount = payableTotalAMount;
-        this.myHashMap = myHashMap;
+        this.loanRepaymentSummaryTable = loanRepaymentSummaryTable;
     }
 
     public double getTotalInterest() {
@@ -37,11 +37,12 @@ public class LoanRepaymentResponse {
         this.payableTotalAMount = payableTotalAMount;
     }
 
-    public HashMap<String, Integer> getMyHashMap() {
-        return myHashMap;
+    public List<LoanRepaymentSummary> getLoanRepaymentSummaryTable() {
+        return loanRepaymentSummaryTable;
     }
 
-    public void setMyHashMap(HashMap<String, Integer> myHashMap) {
-        this.myHashMap = myHashMap;
+    public void setLoanRepaymentSummaryTable(List<LoanRepaymentSummary>
+                                                     loanRepaymentSummaryTable) {
+        this.loanRepaymentSummaryTable = loanRepaymentSummaryTable;
     }
 }
