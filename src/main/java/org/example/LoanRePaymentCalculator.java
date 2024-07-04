@@ -39,6 +39,8 @@ public class LoanRePaymentCalculator {
 
             totalInterestPaid += interestPaid;
             repaymentSummaryTable.add(new LoanRepaymentSummary(i, interestPaid, principalPaid, pendingBalance));
+
+            //In this case customer can claim over payment
             if (pendingBalance <= 0) {
                 break;
             }
